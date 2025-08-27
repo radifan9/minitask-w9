@@ -34,7 +34,7 @@ CREATE TABLE librarians (
     name VARCHAR(60) NOT NULL
 );
 
-
+-- Relasi 
 ALTER TABLE "books" ADD FOREIGN KEY ("bookshelve_id") REFERENCES "bookshelves" ("id");
 
 ALTER TABLE "bookshelves" ADD FOREIGN key ("category_id") REFERENCES "categories" ("id")
