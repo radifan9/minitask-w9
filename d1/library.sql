@@ -7,7 +7,7 @@ CREATE TABLE books (
 
 CREATE TABLE bookshelves (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  code VARCHAR(12) NOT NULL,
+  code VARCHAR(6) NOT NULL,
   category_id INTEGER NOT NULL
 );
 
@@ -18,9 +18,9 @@ CREATE TABLE categories (
 
 CREATE TABLE borrowing (
   id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  book_id INTEGER,
-  member_id INTEGER,
-  librarian_id INTEGER,
+  book_id INTEGER NOT NULL,
+  member_id INTEGER NOT NULL,
+  librarian_id INTEGER NOT NULL,
   created_at TIMESTAMP DEFAULT current_timestamp NOT NULL
 );
 
